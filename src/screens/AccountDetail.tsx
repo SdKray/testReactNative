@@ -1,10 +1,10 @@
 import { useLocalSearchParams } from 'expo-router';
 import { View } from 'react-native';
 
-import { ThemedText } from '@/presentation/components/themed-text';
-import { ThemedView } from '@/presentation/components/themed-view';
-import { layout } from '@/presentation/styles';
-import { formatCurrency } from '@/presentation/utils/currency';
+import { ThemedText } from '../components/themed-text';
+import { ThemedView } from '../components/themed-view';
+import { formatCurrency } from '../models/Account';
+import { layout } from '../styles';
 
 export default function AccountDetail() {
     const { number, type, balance } = useLocalSearchParams();

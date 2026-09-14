@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { getAccounts } from '@/application/useCases/GetAccounts';
-import { Account } from '@/domain/entities/Account';
-import { accountRepository } from '@/Infrastructure/repositories/AccountRepositoryImpl';
+import { Account } from '../models/Account';
+import { getAccounts } from '../services/accountService';
 
 export function useAccounts() {
     const [accounts, setAccounts] = useState<Account[]>([]);
@@ -16,7 +15,7 @@ export function useAccounts() {
             else setLoading(true);
 
             setError(null);
-            const data = await getAccounts(accountRepository);
+            const data = await getAccounts();
             setAccounts(data);
         } catch (e) {
             console.log(e);

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { Spacing } from '@/presentation/theme';
+import { Spacing } from './constants/theme';
 
 export const layout = StyleSheet.create({
     screen: {

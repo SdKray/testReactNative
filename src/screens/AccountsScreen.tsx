@@ -1,12 +1,12 @@
 import { useRouter } from 'expo-router';
 import { FlatList, RefreshControl, View } from 'react-native';
 
-import { Account } from '@/domain/entities/Account';
-import { AccountCard } from '@/presentation/components/AccountCard';
-import { ThemedView } from '@/presentation/components/themed-view';
-import { useTheme } from '@/presentation/hooks/use-theme';
-import { useAccounts } from '@/presentation/hooks/useAccounts';
-import { layout } from '@/presentation/styles';
+import { AccountCard } from '../components/AccountCard';
+import { ThemedView } from '../components/themed-view';
+import { useTheme } from '../hooks/use-theme';
+import { useAccounts } from '../hooks/useAccounts';
+import { Account } from '../models/Account';
+import { layout } from '../styles';
 
 export default function AccountsScreen() {
     const router = useRouter();

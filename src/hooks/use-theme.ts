@@ -1,5 +1,5 @@
-import { useColorScheme } from '@/presentation/hooks/use-color-scheme';
-import { Colors } from '@/presentation/theme';
+import { Colors } from '../constants/theme';
+import { useColorScheme } from './use-color-scheme';
 
 export function useTheme() {
     const scheme = useColorScheme();

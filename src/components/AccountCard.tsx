@@ -1,10 +1,9 @@
 import { Pressable, View } from 'react-native';
 
-import { Account } from '@/domain/entities/Account';
-import { ThemedText } from '@/presentation/components/themed-text';
-import { ThemedView } from '@/presentation/components/themed-view';
-import { layout } from '@/presentation/styles';
-import { formatCurrency } from '@/presentation/utils/currency';
+import { Account, formatCurrency } from '../models/Account';
+import { layout } from '../styles';
+import { ThemedText } from './themed-text';
+import { ThemedView } from './themed-view';
 
 export function AccountCard({ account, onPress }: { account: Account; onPress: (account: Account) => void }) {
     return (
